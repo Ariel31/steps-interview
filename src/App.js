@@ -1,12 +1,7 @@
 import "./App.css";
-import VirtualizedList from "./components/VirtualizedList";
 
 function App() {
-  return (
-    <div className="App">
-      <VirtualizedList></VirtualizedList>
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;

@@ -1,10 +1,10 @@
 import "./App.css";
-import VirtualizedList from "./components/VirtualizedList";
+import CommentList from "./containers/CommentsList";
 
 function App() {
   return (
     <div className="App">
-      <VirtualizedList></VirtualizedList>
+      <CommentList></CommentList>
     </div>
   );
 }

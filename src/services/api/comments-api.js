@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const commentsEndPoints = {
-  getAllComments: "https://jsonplaceholder.typicode.com/"
+  getAllComments: "https://jsonplaceholder.typicode.com/comments"
 };
 
 export const getCommentsChunk = async (start, end) => {

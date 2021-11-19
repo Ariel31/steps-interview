@@ -3,7 +3,6 @@ import { getCommentsChunk } from "../../services/api/comments-api";
 import { CommentsConsts } from "../../consts/comments.consts";
 import { FixedSizeList } from "react-window";
 import InfiniteLoader from "react-window-infinite-loader";
-import AutoSizer from "react-virtualized-auto-sizer";
 
 const CommentList = () => {
   const [comments, setComments] = useState([]);

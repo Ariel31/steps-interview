@@ -1,7 +1,4 @@
 import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
-import { useEffect } from "react";
 
 const Item = ({ style, index }) => {
   return (

@@ -3,6 +3,7 @@ import { getCommentsChunk } from "../../services/api/comments-api";
 import { CommentsConsts } from "../../consts/comments.consts";
 import { FixedSizeList } from "react-window";
 import InfiniteLoader from "react-window-infinite-loader";
+import Item from "../../components/ListItem";
 
 const CommentList = () => {
   const [comments, setComments] = useState([]);
@@ -27,18 +28,16 @@ const CommentList = () => {
     >
       {({ onItemsRendered, ref }) => (
         <FixedSizeList
-          height={300}
+          height={500}
           width={800}
           itemCount={comments.length}
           itemSize={20}
           onItemsRendered={onItemsRendered}
           ref={ref}
         >
-          {({ index, style }) => (
-            <div style={style}>
-              <label>{comments[index].id}</label>
-            </div>
-          )}
+          {({ index, style }) =>
+            Item({ index, style, content: comments[index] })
+          }
         </FixedSizeList>
       )}
     </InfiniteLoader>

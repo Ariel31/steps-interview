@@ -1,30 +1,25 @@
 import * as React from "react";
-import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useForm } from "react-hook-form";
 
-export default function AddCommentDialog({ setClose, open, onCLick }) {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm();
+export default function AddCommentDialog({ setClose, open, onClick }) {
+  const { register, handleSubmit } = useForm();
 
-  const handleAddComment = data => {
+  /*   const handleAddComment = data => {
+    onClick(data);
     console.log(data);
     setClose();
-  };
+  }; */
 
   return (
     <div>
       <Dialog open={open} onClose={setClose}>
         <DialogTitle>Add Comment</DialogTitle>
         <DialogContent>
-          <form onSubmit={handleSubmit(handleAddComment)}>
+          <form onSubmit={handleSubmit(onClick)}>
             <TextField
               label="Name"
               autoFocus

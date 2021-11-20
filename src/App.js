@@ -1,10 +1,10 @@
 import "./App.css";
-import CommentList from "./containers/CommentsList";
+import CommentLayout from "./layouts/Commets";
 
 function App() {
   return (
     <div className="App">
-      <CommentList></CommentList>
+      <CommentLayout />
     </div>
   );
 }

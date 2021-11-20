@@ -3,6 +3,7 @@ import { getCommentsChunk } from "../../services/api/comments-api";
 import { CommentsConsts } from "../../consts/comments.consts";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Item from "../../components/ListItem";
+import "./index.css";
 
 const CommentList = () => {
   const [comments, setComments] = useState([]);
@@ -20,10 +21,8 @@ const CommentList = () => {
   }, []);
 
   return (
-    <div style={{ padding: "5%", height: "100%" }}>
+    <div className="infinite-scroll-container">
       <InfiniteScroll
-        style={{ height: "100%", width: "100%" }}
-        className="infinite-scroll-container"
         dataLength={comments.length}
         next={getComment}
         hasMore={true}

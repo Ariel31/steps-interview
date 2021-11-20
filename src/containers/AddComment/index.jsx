@@ -4,7 +4,7 @@ import AddCommentDialog from "../../components/Forms/AddCommentForm";
 import { addComment } from "../../services/api/comments-api";
 
 const AddComment = () => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const onAddComment = async comment => {
     const addCommentResult = await addComment(comment);
@@ -15,6 +15,7 @@ const AddComment = () => {
   return (
     <>
       <Button
+        style={{ position: "sticky", top: 0 }}
         onClick={() => setOpen(!open)}
         color="primary"
         variant="contained"

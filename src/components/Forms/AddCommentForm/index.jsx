@@ -4,15 +4,10 @@ import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useForm } from "react-hook-form";
+import { Button } from "@mui/material";
 
 export default function AddCommentDialog({ setClose, open, onClick }) {
   const { register, handleSubmit } = useForm();
-
-  /*   const handleAddComment = data => {
-    onClick(data);
-    console.log(data);
-    setClose();
-  }; */
 
   return (
     <div>
@@ -47,7 +42,15 @@ export default function AddCommentDialog({ setClose, open, onClick }) {
               {...register("comment", { required: true })}
             />
 
-            <TextField autoFocus margin="dense" type="submit" fullWidth />
+            <Button
+              autoFocus
+              margin="dense"
+              fullWidth
+              variant="contained"
+              type="submit"
+            >
+              Add Comment
+            </Button>
           </form>
         </DialogContent>
       </Dialog>

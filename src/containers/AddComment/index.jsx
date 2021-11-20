@@ -14,7 +14,13 @@ const AddComment = () => {
 
   return (
     <>
-      <Button onClick={() => setOpen(!open)}>Add Comment</Button>
+      <Button
+        onClick={() => setOpen(!open)}
+        color="primary"
+        variant="contained"
+      >
+        Add Comment
+      </Button>
       <AddCommentDialog
         open={open}
         onClick={onAddComment}

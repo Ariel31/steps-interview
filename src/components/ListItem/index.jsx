@@ -12,23 +12,16 @@ import Typography from "@mui/material/Typography";
 
 const Item = ({ style, index, content }) => {
   return (
-    <List
-      //sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
-      key={index}
-      style={{
-        width: "100%",
-        maxWidth: 360,
-        bgcolor: "background.paper"
-      }}
-    >
-      <ListItem alignItems="flex-start">
-        <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-        </ListItemAvatar>
-        <ListItemText primary={content.email} secondary={content.body} />
-      </ListItem>
-      <Divider variant="inset" component="li" />
-    </List>
+    <ListItem alignItems="flex-start" style={style} key={index}>
+      <ListItemAvatar>
+        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+      </ListItemAvatar>
+      <ListItemText
+        primary={content.email}
+        secondary={content.body}
+        style={{ color: "white" }}
+      />
+    </ListItem>
   );
 };
 

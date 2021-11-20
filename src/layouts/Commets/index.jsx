@@ -3,8 +3,8 @@ import AddComment from "../../containers/AddComment";
 
 const CommentLayout = () => (
   <div>
-    <CommentList />
     <AddComment />
+    <CommentList />
   </div>
 );
 

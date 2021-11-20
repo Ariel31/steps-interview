@@ -1,21 +1,12 @@
 import * as React from "react";
-import Avatar from "@mui/material/Avatar";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import ListItemAvatar from "@mui/material/ListItemAvatar";
+import "./index.css";
 
 const Item = ({ style, index, content }) => {
   return (
-    <ListItem alignItems="flex-start" style={style} key={index}>
-      <ListItemAvatar>
-        <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
-      </ListItemAvatar>
-      <ListItemText
-        primary={content.email}
-        secondary={content.body}
-        style={{ color: "white" }}
-      />
-    </ListItem>
+    <div className="card card-3" style={style} key={index}>
+      <h2 className="card__title">{content.email}</h2>
+      <p className={"card__content"}>{content.body}></p>
+    </div>
   );
 };
 

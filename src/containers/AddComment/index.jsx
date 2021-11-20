@@ -10,7 +10,11 @@ const AddComment = () => {
   return (
     <>
       <Button onClick={() => setOpen(!open)}>Add Comment</Button>
-      <AddCommentDialog open={open} onClick={addComment} />
+      <AddCommentDialog
+        open={open}
+        onClick={addComment}
+        setClose={() => setOpen(false)}
+      />
     </>
   );
 };

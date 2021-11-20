@@ -7,27 +7,21 @@ import DialogContent from "@mui/material/DialogContent";
 import DialogTitle from "@mui/material/DialogTitle";
 import { useForm } from "react-hook-form";
 
-export default function AddCommentDialog() {
-  const [open, setOpen] = React.useState(true);
+export default function AddCommentDialog({ setClose, open, onCLick }) {
   const {
     register,
     handleSubmit,
     formState: { errors }
   } = useForm();
 
-  const handleClickOpen = () => {
-    setOpen(true);
+  const handleAddComment = data => {
+    console.log(data);
+    setClose();
   };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
-  const handleAddComment = data => console.log(data);
 
   return (
     <div>
-      <Dialog open={open} onClose={handleClose}>
+      <Dialog open={open} onClose={setClose}>
         <DialogTitle>Add Comment</DialogTitle>
         <DialogContent>
           <form onSubmit={handleSubmit(handleAddComment)}>
@@ -39,7 +33,6 @@ export default function AddCommentDialog() {
               fullWidth
               {...register("name", { required: true })}
             />
-            {errors.name && <p>name is required.</p>}
 
             <TextField
               label="Email"
@@ -49,7 +42,6 @@ export default function AddCommentDialog() {
               fullWidth
               {...register("email", { required: true })}
             />
-            {errors.email && <p>email is required.</p>}
 
             <TextField
               label="Comment"
@@ -59,7 +51,6 @@ export default function AddCommentDialog() {
               fullWidth
               {...register("comment", { required: true })}
             />
-            {errors.comment && <p>comment is required.</p>}
 
             <TextField autoFocus margin="dense" type="submit" fullWidth />
           </form>

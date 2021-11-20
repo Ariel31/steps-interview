@@ -1,6 +1,5 @@
 import CommentList from "../../containers/CommentsList";
-import { Button } from "@mui/material";
-import AddCommentDialog from "../../components/Forms/AddCommentForm";
+import AddComment from "../../containers/AddComment";
 
 const CommentLayout = () => (
   <div style={{ height: "100%", width: "100%" }}>
@@ -8,7 +7,7 @@ const CommentLayout = () => (
       <CommentList />
     </div>
     <div>
-      <AddCommentDialog />
+      <AddComment />
     </div>
   </div>
 );

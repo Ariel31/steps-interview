@@ -1,10 +1,10 @@
 import "./App.css";
-import VirtualizedList from "./components/VirtualizedList";
+import CommentLayout from "./layouts/Commets";
 
 function App() {
   return (
     <div className="App">
-      <VirtualizedList></VirtualizedList>
+      <CommentLayout />
     </div>
   );
 }

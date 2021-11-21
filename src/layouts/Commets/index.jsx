@@ -1,5 +1,5 @@
-import CommentList from "../../containers/CommentsList";
-import AddComment from "../../containers/AddComment";
+import CommentList from "../../containers/Comments/CommentsList";
+import AddComment from "../../containers/Comments/AddComment";
 
 const CommentLayout = () => (
   <div>

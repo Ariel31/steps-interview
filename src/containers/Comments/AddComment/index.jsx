@@ -1,7 +1,7 @@
 import { Button } from "@mui/material";
 import { useState } from "react";
-import AddCommentDialog from "../../components/Forms/AddCommentForm";
-import { addComment } from "../../services/api/comments-api";
+import AddCommentDialog from "../../../components/Comments/Forms/AddCommentForm";
+import { addComment } from "../../../services/api/comments-api";
 
 const AddComment = () => {
   const [open, setOpen] = useState(false);

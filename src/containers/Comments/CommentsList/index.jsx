@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { getCommentsChunk } from "../../services/api/comments-api";
-import { CommentsConsts } from "../../consts/comments.consts";
+import { getCommentsChunk } from "../../../services/api/comments-api";
+import { CommentsConsts } from "../../../consts/comments.consts";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Item from "../../components/ListItem";
+import Item from "../../../components/Comments/ListItem";
 import "./index.css";
 
 const CommentList = () => {
